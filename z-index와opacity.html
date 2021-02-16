@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index</title>
+  <!--z-index는 겹처졌을때 언떤게 위에올라오냐를 결정 -->
+  <!-- z-index가 값이 높은게 위에 올라옴 -->
+  <style>
+    .red,
+    .green,
+    .blue {
+      position: absolute;
+      width: 100px;
+      color: white;
+      line-height: 100px;
+      text-align: center;
+    }
+
+    /* opacity 투명도를 결정 */
+    /* 1일때 불투명 0에 가까울수록 투명해짐  */
+    span {
+      opacity: 0.9;
+    }
+
+    .red {
+      z-index: 10;
+      top: 20px;
+      left: 80px;
+      background: red;
+    }
+
+    .green {
+      z-index: 2;
+      top: 80px;
+      left: 20px;
+      background: green;
+    }
+
+    .blue {
+      z-index: 1;
+      top: 100px;
+      left: 100px;
+      background: blue;
+    }
+
+    button {
+      position: absolute;
+      top: 230px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- div랑 똑같이 그룹으로 묶는효과 but div는 블록(줄바꿈됨)속성이지만 span은 인라인속성이다 -->
+    <span class="red">z-index:10</span>
+  </div>
+  <div>
+    <span class="green">z-index:2</span>
+  </div>
+  <div>
+    <span class="blue">z-index:1</span>
+  </div>
+</body>
+
+</html>

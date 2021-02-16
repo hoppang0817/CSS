@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플로트</title>
+  <!-- 플로트는 왼쪽이나 오른쪽으로 배치하는거 -->
+  <style>
+    .container {
+      width: 600px;
+      height: 300px;
+      border: 2px solid gray;
+      margin: 0 auto;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      /* 겹치는부분은 보이지않게 */
+      overflow: hidden;
+    }
+
+    .red {
+      background-color: tomato;
+    }
+
+    .green {
+      background-color: yellowgreen;
+    }
+
+    .blue {
+      background-color: skyblue;
+    }
+
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right
+    }
+
+    /* 따라올라가는걸 방지 */
+    .clear {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box red float-left"></div>
+    <div class="box green float-right"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam possimus minus, inventore sit quia voluptatum
+      velit recusandae ipsa quos ipsam fuga illum soluta similique architecto nam, quod corrupti! Unde, iusto?</p>
+    <div class="box blue clear"></div>
+  </div>
+</body>
+
+</html>

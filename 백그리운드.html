@@ -16,35 +16,56 @@
 
     .page1 {
       /* body의 높이를 화면 전체로 */
+      /* vh화면기준이며 100vh는 화면기준에서 100%라는 뜻과 같음. 상대적인 기준화면크기가변해도 100% */
+      /* vh는 위에사용된는 viewport가없으면 사용불가 */
       height: 100vh;
+
       /* no-repeat 사진반복을 없애줌 */
       /* center center는 사진의 화면 위치를 지정해준거 */
       background: url(img/pg1.jpg) no-repeat center center;
+
       /* cover 는 화면에 맞게 크기조절 */
       background-size: cover;
 
     }
 
     .page2 {
-      /* body의 높이를 화면 전체로 */
       height: 100vh;
-      /* no-repeat 사진반복을 없애줌 */
-      /* center center는 사진의 화면 위치를 지정해준거 */
       background: url(img/pg2.jpg) no-repeat center center;
-      /* cover 는 화면에 맞게 크기조절 */
       background-size: cover;
     }
 
     .page3 {
       height: 100vh;
-      background: url(img/pg3.jpg) no-repeat center center;
+      /* deg 각도를말함, to right같은 방향지정가능 */
+      /* linear-gradient는 색을조합해서 배경화면으로 만들어줌 */
+      background: linear-gradient(45deg, red, yellow, Green, pink);
       background-size: cover;
+    }
+
+    .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: xx-large;
+      font-weight: 800;
+      width: 300px;
+      height: 100px;
+      border: 10px solid cornflowerblue;
     }
   </style>
 </head>
 
 <body>
-  <div class="page1"></div>
+  <!-- div는 블록태그  블록태그는 가로는100% 세로는 없음 높이지정해줘야함 -->
+  <div class="page1">
+    <!-- <div class="box">정중앙으로</div> -->
+  </div>
   <div class="page2"></div>
   <div class="page3"></div>
 </body>
