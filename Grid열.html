@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid열</title>
+  <style>
+    .grid {
+      display: grid;
+      /* 그리드 열 만들기 */
+      /* 정확한 크기를 주고싶은면 px사용  화면크기에 맞게 비율 등분하고싶으면 fr */
+      /* grid-template-columns: 200px auto 200px; */
+      /* grid-template-columns: auto auto auto; */
+      grid-template-columns: 1fr 2fr 1fr 2fr;
+      /* 아이템사이에 간격 
+      row-gap 위아래 간격
+      column-gap 좌우 간격*/
+      gap: 10px;
+      /* row-gap: 20px; */
+      /* column-gap: 10px; */
+    }
+
+    .item {
+      padding: 3rem;
+      border: 1px solid #ccc;
+      background-color: #f4f4f4;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 5fr 1fr;
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+    <div class="item">Item 10</div>
+  </div>
+
+  <main>
+    <!-- 본문 -->
+    <section>
+      <h3>환영합니다</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis dolorem accusamus consequatur obcaecati,
+        explicabo assumenda voluptates ea! Maiores a numquam ullam, error quisquam, facere labore quae amet assumenda
+        suscipit iusto!</p>
+    </section>
+    <!-- 사이드 글 -->
+    <aside>
+      <h3>사이드 글</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, possimus.</p>
+    </aside>
+  </main>
+
+</body>
+
+</html>

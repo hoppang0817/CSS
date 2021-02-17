@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    html,
+    body {
+      background-color: #ffeead;
+      margin: 10px;
+    }
+
+    /* 아이템들 */
+    .container>div {
+      padding: 10px;
+      text-align: center;
+      /* 16*2한 결과 */
+      font-size: 2em;
+      color: #ffeead;
+    }
+
+    /* order를 사용해서 아이템들 위치를 변경할수있음 (아이템 순서)*/
+    /* flex값을 주어 아이템들이 컨테이너 안에서 가질수있는 공간을 나눌수있음 (아이템의 사이즈 비율)*/
+    .home {
+      background-color: #96ceb4;
+      /* margin-right: auto; */
+      flex: 1;
+      order: 1;
+
+      /* 개별적으로 아이템 정렬 */
+      align-self: flex-start;
+    }
+
+    .search {
+      background-color: #ff6f69;
+      flex: 2;
+      order: 3;
+
+      /* 개별정렬 */
+      align-self: flex-end;
+    }
+
+    .logout {
+      background-color: skyblue;
+      flex: 1;
+      order: 2;
+
+    }
+
+    .container {
+      border: 5px solid #ffcc5c;
+      display: flex;
+      /* 가로정렬 */
+      /* flex-start , 
+        center 모든아이템이 중간으로 정렬,
+        flec-end 모든 아이템이 뒤로정렬 ,
+        space-around 모든아이테에 간격생김, 
+        space-between 중앙아이템을 중심으로 간격생김*/
+      justify-content: flex-end;
+
+      height: 50vh;
+
+      /* 세로정렬 */
+      align-items: center;
+
+      /* 화면사이즈에 따라 반응 */
+      /* nowrap 
+         wrap 화면사이즈에 따라 아이템들이 밑으로 정렬됨 
+         wrap-reveres 여러줄에 걸쳐 반대로 정렬*/
+      flex-wrap: wrap;
+
+      /* flex-direction: row 아이템들을 텍스트와의 방향과 동일하게
+      row-reverse 텍스트와 반대방향
+      column 아이템들을 위에서 아래로정렬
+      column-reverse 아래에서 위로정렬; */
+
+      /* flex-flow : <flex-direction><flex-wrap> 한번에사용가능 */
+      /* align-content 세로선상에 여분의 공간이 있는경우 flex 컨테이너 사이의 간격조절
+       flex-start , 
+        center 모든아이템이 중간으로 정렬,
+        flec-end 모든 아이템이 뒤로정렬 ,
+        space-around 모든아이테에 간격생김, 
+        space-between 중앙아이템을 중심으로 간격생김*/
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 컨테이너라는 큰블록안에 아이템들 정렬 -->
+  <!-- flex는 아이템들이 담겨있는 상위태그에 적용 -->
+  <div class="container">
+    <!--아이템들 -->
+    <div class="home">Hoem</div>
+    <div class="search">Search</div>
+    <div class="logout">Logout</div>
+  </div>
+</body>
+
+</html>
